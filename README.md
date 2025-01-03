@@ -32,19 +32,19 @@ The application is structured to encourage reusability and maintainability, with
 
 ### Main Components:
 
-#### 1. `<Logo />`
+#### 1. `Logo`
 
 This is a simple presentational component that displays the logo of the application.
 
-#### 2. `<Form />`
+#### 2. `Form`
 
 This omponent allows users to input items they need for their trip. It uses the onAddItems handler function passed down from its parent component to add new items to the list. It’s designed to collect user input, such as the item name and details, and trigger the addition of these items to the state.
 
-#### 3. `<PackingList />`
+#### 3. `PackingList`
 
 This component manages the display of all packing items. It receives the items array as props and handles removing items (`onRemoveItem`), toggling their packed status (`onToggleItem`), and clearing all items (`onClearItems`). This component is responsible for rendering the list of items and passing necessary actions down to child components.
 
-#### 4. `<Stats />`
+#### 4. `Stats`
 
 Displays statistics on the number of items packed, total items, and the percentage packed. It receives the items prop and uses it to compute and display relevant statistics about the trip.
 
