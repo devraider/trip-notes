@@ -1,10 +1,10 @@
-function Item({ item }) {
+function Item({ item, onRemoveItem }) {
   return (
     <li>
       <span style={item.packed ? { textDecorationLine: "line-through" } : {}}>
         {item.quantity} {item.description}{" "}
       </span>
-      <button>❌</button>
+      <button onClick={() => onRemoveItem(item.id)}>❌</button>
     </li>
   );
 }
