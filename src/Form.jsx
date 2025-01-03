@@ -3,11 +3,6 @@ import { useState } from "react";
 function Form() {
   const [description, setDescription] = useState("");
   const [itemCount, setItemCount] = useState(2);
-  const [items, setItems] = useState([]);
-
-  function handleAddItems(item) {
-    setItems((items) => [...items, item]);
-  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -23,7 +18,6 @@ function Form() {
       packed: false,
       id: Date.now(),
     };
-    handleAddItems(newItem);
     setDescription("");
     setItemCount(1);
   }
