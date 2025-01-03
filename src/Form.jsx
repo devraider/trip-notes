@@ -18,6 +18,7 @@ function Form({ onAddItems }) {
       packed: false,
       id: Date.now(),
     };
+
     onAddItems(newItem);
     setDescription("");
     setQuantity(1);

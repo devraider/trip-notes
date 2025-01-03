@@ -4,29 +4,6 @@ import Logo from "./Logo";
 import PackingList from "./PackingList";
 import Stats from "./Stats";
 
-const items = [
-  {
-    id: 1,
-    quantity: 1,
-    description: "Passport",
-  },
-  {
-    id: 3,
-    quantity: 1,
-    description: "Passport",
-  },
-  {
-    id: 2,
-    quanity: 1,
-    description: "Passport",
-  },
-  {
-    id: 4,
-    quantity: 1,
-    description: "Passport",
-    packed: true,
-  },
-];
 function App() {
   const [items, setItems] = useState([]);
 
