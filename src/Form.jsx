@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-function Form() {
+function Form({ onAddItems }) {
   const [description, setDescription] = useState("");
-  const [itemCount, setItemCount] = useState(2);
+  const [quantity, setQuantity] = useState(2);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -14,19 +14,20 @@ function Form() {
 
     const newItem = {
       description,
-      itemCount,
+      quantity,
       packed: false,
       id: Date.now(),
     };
+    onAddItems(newItem);
     setDescription("");
-    setItemCount(1);
+    setQuantity(1);
   }
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip? 😍</h3>
       <select
-        onChange={(e) => setItemCount(Number(e.target.value))}
-        value={itemCount}
+        onChange={(e) => setQuantity(Number(e.target.value))}
+        value={quantity}
       >
         {Array.from({ length: 20 }, (_, index) => index + 1).map((i) => (
           <option key={i} value={i}>

@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="app">
       <Logo />
-      <Form />
+      <Form onAddItems={handleAddItems} />
       <PackingList items={items} />
       <Stats />
     </div>
