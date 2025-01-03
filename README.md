@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Trip Notes ✈️ 🗒️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Motivation
 
-## Available Scripts
+The "Trip Notes" project is a ReactJS-based application designed to help users plan their travels.
 
-In the project directory, you can run:
+The app is meant to assist users in taking note of all items they need for a vacation. You can add multiple items, input them manually, and even delete or sort them to keep everything organized.
 
-### `npm start`
+In this project, I practiced several key React concepts, including:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **State Lifting:** Moving state to a higher component to manage shared data across child components.
+- **Data Flow**: Ensuring smooth and consistent flow of data between components.
+- **Controlled Form Elements**: Managing form inputs through controlled components to ensure data consistency.
+- **Props**: Passing data between components through props to enable dynamic rendering.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project also helped me gain practical experience in developing a fully-functional app with interactive features.
 
-### `npm test`
+## Features ✨
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **ReactJS** - Utilizes React version 18.3 for building user interfaces.
+2. **CSS Modules** - CSS Modules for component-scoped styling, ensuring modular and maintainable CSS.
+3. **JavaScript (ES6)** - JavaScript features such as array methods, template literals, and destructuring for cleaner and more efficient code.
+4. **Item Management** - Users can easily add, delete, and sort items for their trip, making it simple to stay organized.
+5. **Trip Organization** - Features like sorting and filtering allow users to efficiently manage their trip notes, packing items.
+6. **Real-Time Stats** - The Stats component provides real-time insights on trip preparation, including: - The total number of items added. - The percentage of packed items to help users track progress.
+   Dynamic updates based on user interaction, ensuring statistics are always accurate.
+7. **Interactive UI** - Dynamic rendering based on user input means a highly interactive experience. Sorting items, adding new ones, and updating statistics happens in real-time with minimal page refreshes.
 
-### `npm run build`
+## Component Structure 🪧
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application is structured to encourage reusability and maintainability, with components designed to handle specific tasks in the user interface. Here’s a closer look at the components:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Main Components:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 1. `<Logo />`
 
-### `npm run eject`
+This is a simple presentational component that displays the logo of the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### 2. `<Form />`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This omponent allows users to input items they need for their trip. It uses the onAddItems handler function passed down from its parent component to add new items to the list. It’s designed to collect user input, such as the item name and details, and trigger the addition of these items to the state.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### 3. `<PackingList />`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This component manages the display of all packing items. It receives the items array as props and handles removing items (`onRemoveItem`), toggling their packed status (`onToggleItem`), and clearing all items (`onClearItems`). This component is responsible for rendering the list of items and passing necessary actions down to child components.
 
-## Learn More
+#### 4. `<Stats />`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Displays statistics on the number of items packed, total items, and the percentage packed. It receives the items prop and uses it to compute and display relevant statistics about the trip.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Demo / Walkthrough
 
-### Code Splitting
+## How to Get and Run the Application 🛠️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 1. Clone the application
 
-### Analyzing the Bundle Size
+```bash
+git clone https://github.com/devraider/trip-notes.git
+cd trip-notes
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2. Install Dependencies
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3. Run application in developemnt mode
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### 4. Build for Production
 
-### Deployment
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Credits
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [**Facebook React Team**](https://github.com/facebook/react) for great documentation: [Learn React from Docs](https://react.dev/learn)
+- 🧑‍🏫 [**Jonas Schmedtmann**](https://github.com/jonasschmedtmann)
+- 🎓 [The Ultimate React Course 2024: React, Next.js, Redux & More](https://www.udemy.com/course/the-ultimate-react-course/)
