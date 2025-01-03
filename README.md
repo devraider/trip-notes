@@ -48,7 +48,23 @@ This component manages the display of all packing items. It receives the items a
 
 Displays statistics on the number of items packed, total items, and the percentage packed. It receives the items prop and uses it to compute and display relevant statistics about the trip.
 
-## Demo / Walkthrough
+## Demo / Walkt-hrough
+
+### 1. Overview
+
+![IMG1](assets/readme/1.png)
+
+### 2. List of items added
+
+![IMG1](assets/readme/3.png)
+
+### 3. Packed itmes
+
+![IMG1](assets/readme/4.png)
+
+### 4. Sorting
+
+![IMG1](assets/readme/5.png)
 
 ## How to Get and Run the Application 🛠️
 
